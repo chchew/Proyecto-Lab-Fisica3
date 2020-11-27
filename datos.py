@@ -119,5 +119,11 @@ def ventanaDatos():
         neutrones = entry6.get()
         electrones = entry7.get()
         voltaje = entry8.get()
-        
+
+    def valueCheckBox():
+        ch1 = C1.get()
+        ch2 = C2.get()
+        ch3 = C3.get()
+        ch4 = C4.get()
+        ch5 = C5.get()
 ventanaDatos()
