@@ -30,20 +30,20 @@ def ventanaDatos():
     label2 = tk.Label(campo2, text="Protones:", font=("Courier", 13), bg="LightGreen", fg="black")
     label2.pack(side=tk.LEFT, ipady = 7)
     
-    usuario = tk.Text(campo2, width=12, height=1)
-    usuario.pack(side = tk.LEFT)
+    entry5 = tk.Text(campo2, width=12, height=1)
+    entry5.pack(side = tk.LEFT)
     
-    label3 = tk.Label(campo2, text="    Iones:", font=("Courier", 13), bg="LightGreen", fg="black")
+    label3 = tk.Label(campo2, text="    Neutrones:", font=("Courier", 13), bg="LightGreen", fg="black")
     label3.pack(side=tk.LEFT, ipady = 7)
     
-    usuario = tk.Text(campo2, width=12, height=1)
-    usuario.pack(side = tk.LEFT)
+    entry6 = tk.Text(campo2, width=12, height=1)
+    entry6.pack(side = tk.LEFT)
 
     label2 = tk.Label(campo2, text="    Electrones:", font=("Courier", 13), bg="LightGreen", fg="black")
     label2.pack(side=tk.LEFT, ipady = 7)
     
-    usuario = tk.Text(campo2, width=12, height=1)
-    usuario.pack(side = tk.LEFT)
+    entry7 = tk.Text(campo2, width=12, height=1)
+    entry7.pack(side = tk.LEFT)
 
     campo2.pack(side=tk.TOP)
 
@@ -62,8 +62,8 @@ def ventanaDatos():
     label2 = tk.Label(campo2, text="Voltaje:", font=("Courier", 13), bg="LightGreen", fg="black")
     label2.pack(side=tk.LEFT, ipady = 7)
     
-    usuario = tk.Text(campo2, width=12, height=1)
-    usuario.pack(side = tk.LEFT)
+    entry8 = tk.Text(campo2, width=12, height=1)
+    entry8.pack(side = tk.LEFT)
 
     campo2.pack(side=tk.TOP)
 #
@@ -83,3 +83,9 @@ def ventanaDatos():
     button1 = tk.Button(ventanaDatos, text = "Simulacion", font=("Courier", 15))
     button1.pack(pady=10, ipadx=5)
 
+    def registrarUsuario():
+        protones = entry5.get()
+        neutrones = entry6.get()
+        electrones = entry7.get()
+        voltaje = entry8.get()
+        
