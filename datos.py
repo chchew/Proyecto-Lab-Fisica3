@@ -33,7 +33,7 @@ def ventanaDatos():
     usuario = tk.Text(campo2, width=12, height=1)
     usuario.pack(side = tk.LEFT)
     
-    label3 = tk.Label(campo2, text="    Iones:", font=("Courier", 13), bg="LightGreen", fg="black")
+    label3 = tk.Label(campo2, text="    Neutrones:", font=("Courier", 13), bg="LightGreen", fg="black")
     label3.pack(side=tk.LEFT, ipady = 7)
     
     usuario = tk.Text(campo2, width=12, height=1)
