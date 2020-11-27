@@ -73,33 +73,43 @@ def ventanaDatos():
     trash.pack(side=tk.TOP)
     campo3 = tk.Frame(ventanaDatos, bg = "LightGreen")
 
-    label4 = tk.Label(campo3, text="Seleccione la particula:", font=("Courier", 17), bg="LightGreen", fg="black")
+    label4 = tk.Label(campo3, text="Seleccione las particula:", font=("Courier", 17), bg="LightGreen", fg="black")
     label4.pack(side=tk.TOP)
-
-
-    n = tk.StringVar() 
-    monthchoosen = ttk.Combobox(ventanaDatos, width = 27,  
-                                textvariable = n) 
     
-    # Adding combobox drop down list 
-    monthchoosen['values'] = ('Proton',  
-                            'Electron', 
-                            'Nucleo de deuterio', 
-                            'Nucleo de litio', 
-                            'Nucleo de berilio', 
-                            'Positron',  
-                            'Antiproton',  
-                            'Nucleo de carbono de antimateria',  
-                            'Nucleo de berilio de antimateria',  
-                            'Nucleo de boro de antimateria') 
-    monthchoosen.pack()
+    #particulas
+    CheckVar1 = IntVar()
+    CheckVar2 = IntVar()
+    CheckVar3 = IntVar()
+    CheckVar4 = IntVar()
+    CheckVar5 = IntVar()
+    
+    C1 = Checkbutton(campo3, text = "Proton", variable = CheckVar1, \
+                 onvalue = 1, offvalue = 0, height=5, \
+                 width = 20, bg="LightGreen")
+    C1.pack(side=tk.LEFT, ipady = 7)
 
-
+    C2 = Checkbutton(campo3, text = "Positron", variable = CheckVar2, \
+                 onvalue = 1, offvalue = 0, \
+                 width = 20, bg="LightGreen")
+    
+    C2.pack(side=tk.LEFT, ipady = 7)
+    
+    C3 = Checkbutton(campo3, text = "Antiproton", variable = CheckVar3, \
+                 onvalue = 1, offvalue = 0,\
+                 width = 20, bg="LightGreen")
+    C3.pack(side=tk.LEFT, ipady = 7)
+    
+    C4 = Checkbutton(campo3, text = "Nucleo de deuterio", variable = CheckVar4, \
+                 onvalue = 1, offvalue = 0,\
+                 width = 20, bg="LightGreen")
+    C4.pack(side=tk.LEFT, ipady = 7)
+    
+    C5 = Checkbutton(campo3, text = "Nucleo de litio", variable = CheckVar5, \
+                 onvalue = 1, offvalue = 0,\
+                 width = 20, bg="LightGreen")
+    C5.pack(side=tk.LEFT, ipady = 7)
     
     campo3.pack(side=tk.TOP)
-
-    trash = tk.Label(ventanaDatos, text="", font=("Courier", 17), bg="LightGreen", fg="black")
-    trash.pack(side=tk.TOP)
 
     button1 = tk.Button(ventanaDatos, text = "Simulacion", font=("Courier", 15))
     button1.pack(pady=10, ipadx=5)
@@ -109,4 +119,11 @@ def ventanaDatos():
         neutrones = entry6.get()
         electrones = entry7.get()
         voltaje = entry8.get()
-        
+
+    def valueCheckBox():
+        ch1 = C1.get()
+        ch2 = C2.get()
+        ch3 = C3.get()
+        ch4 = C4.get()
+        ch5 = C5.get()
+ventanaDatos()
