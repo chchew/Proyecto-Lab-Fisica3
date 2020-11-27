@@ -1,5 +1,6 @@
 import tkinter as tk
-from tkinter import messagebox
+from tkinter import ttk
+from tkinter import *
 from random import randint
 from tkinter import Entry
 import psycopg2
@@ -22,9 +23,9 @@ def ventanaDatos():
 
     trash = tk.Label(ventanaDatos, text="", font=("Courier", 17), bg="LightGreen", fg="black")
     trash.pack(side=tk.TOP)
-
+#Crear Particula
     campo2 = tk.Frame(ventanaDatos, bg = "LightGreen")
-    label2 = tk.Label(campo2, text="Particula creada:", font=("Courier", 17), bg="LightGreen", fg="black")
+    label2 = tk.Label(campo2, text="Crear partícula:", font=("Courier", 17), bg="LightGreen", fg="black")
     label2.pack(side=tk.TOP)
     
     label2 = tk.Label(campo2, text="Protones:", font=("Courier", 13), bg="LightGreen", fg="black")
@@ -72,9 +73,29 @@ def ventanaDatos():
     trash.pack(side=tk.TOP)
     campo3 = tk.Frame(ventanaDatos, bg = "LightGreen")
 
-    label4 = tk.Label(campo3, text="Seleccione particulas:", font=("Courier", 17), bg="LightGreen", fg="black")
+    label4 = tk.Label(campo3, text="Seleccione la particula:", font=("Courier", 17), bg="LightGreen", fg="black")
     label4.pack(side=tk.TOP)
 
+
+    n = tk.StringVar() 
+    monthchoosen = ttk.Combobox(ventanaDatos, width = 27,  
+                                textvariable = n) 
+    
+    # Adding combobox drop down list 
+    monthchoosen['values'] = ('Proton',  
+                            'Electron', 
+                            'Nucleo de deuterio', 
+                            'Nucleo de litio', 
+                            'Nucleo de berilio', 
+                            'Positron',  
+                            'Antiproton',  
+                            'Nucleo de carbono de antimateria',  
+                            'Nucleo de berilio de antimateria',  
+                            'Nucleo de boro de antimateria') 
+    monthchoosen.pack()
+
+
+    
     campo3.pack(side=tk.TOP)
 
     trash = tk.Label(ventanaDatos, text="", font=("Courier", 17), bg="LightGreen", fg="black")
